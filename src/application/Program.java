@@ -3,6 +3,8 @@ package application;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -19,6 +21,11 @@ public class Program {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//SellerDaoJDBC sellerDaoJDBC = (SellerDaoJDBC) DaoFactory.CreateSellerDao();
+		
+		SellerDao sellerDao = DaoFactory.CreateSellerDao();
+		
 		System.out.println(seller);
 
 	}
