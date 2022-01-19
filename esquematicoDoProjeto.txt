@@ -1,0 +1,5 @@
+SellerDaoJDBC possui varios metodos com Seller
+SellerDao(Interface) ---> implementa --> SellerDaoJDBC
+Daofactory --> possui um metodo que instancia o SellerDaoJDBC chamado .CreateSellerDao
+
+portanto no program principal podemos criar um SellerDao sellerDao = DaoFactory.CreateSellerDao();

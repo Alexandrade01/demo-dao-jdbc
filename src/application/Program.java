@@ -11,7 +11,13 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) {
-
+		
+		SellerDao sellerDao = DaoFactory.CreateSellerDao();
+		
+		
+		
+		
+		//forma primitiva
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Department obj = new Department(1, "books");
 		Seller seller = null;
@@ -22,12 +28,18 @@ public class Program {
 			e.printStackTrace();
 		}
 		
-		//SellerDaoJDBC sellerDaoJDBC = (SellerDaoJDBC) DaoFactory.CreateSellerDao();
+		System.out.println("forma primitiva ==> "+seller);
+		System.out.println();
 		
-		SellerDao sellerDao = DaoFactory.CreateSellerDao();
 		
-		System.out.println(seller);
+		
 
+		System.out.println("=== TEST 1: seller findById ===== ");
+		seller = sellerDao.findById(3);
+		System.out.println(seller);
+		
+		
+		
 	}
 
 }
